@@ -17,16 +17,16 @@ img{
     -o-transition:background-color 400ms linear ;
     transition:background-color 400ms linear ;
     background-color: #ffffff !important;
-    box-shadow: 0px 8px 20px #b6b6b6;
+    box-shadow: 0px 8px 15px #b6b6b6;
 }
 .navLogo{
     font-family: 'Montserreat',sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     color:#ffffff !important;
 }
 .navLogoScroll{
     font-family: 'Montserreat',sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     color:#18A1C1 !important;
 }
 .navItem{
@@ -94,7 +94,7 @@ img{
 
 /* About */
 .About{
-    margin: 20rem 0;
+    margin: 20rem 0 16rem;
 }
 .AboutTitle{
     color:red;

@@ -8,7 +8,7 @@ const About = () => {
     <Fragment>
         <Container className="About">
             <Row>
-                <Col sm={12} md={6} lg={6} className='me-1' >
+                <Col sm={12} md={6} lg={6} >
                     <h6 className="AboutTitle">JOIN THE EVENT</h6>
                     <h1 className='AboutHeading'>We Create and <span>Turn</span> Into Reality</h1>
                     <p className='AboutSubHeading'>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
