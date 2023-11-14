@@ -1,3 +1,4 @@
+/* Globar Styles */
 img{
     max-width: 100%;
     vertical-align: middle;
@@ -194,4 +195,53 @@ img{
     0%{transform: translateY(0);}
     50%{transform: translateY(20px);}
     100%{transform: translateY(0);}
+}
+
+/* Features */
+.FeaturesBanner{
+    background: url("../img/featureBanner.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10rem;
+}
+.FeaturesBannerOverlay{
+    min-height: 500px;
+    width:100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+.FeaturesContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+.SingleCard{
+    margin: 0;
+    padding: 50px 0;
+    background: url("../img/featureBanner.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    color: white !important;
+}
+.SingleCard::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+.SingleCard img{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
 }
