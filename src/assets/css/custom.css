@@ -245,3 +245,44 @@ img{
     height: 50px;
     margin: 0 auto;
 }
+
+/* Summary */
+.SummaryBanner{
+    background: url("../img/featureBanner2.jpg");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10rem;
+}
+.SummaryBannerOverlay{
+    min-height: 400px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.SingleSummary {
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+}
+.SummaryHeading{
+    font-size: 100px;
+    font-weight: 700;
+}
+.SummarySubHeading{
+    font-size: 30px;
+    font-weight: 600;
+}
+.col:nth-child(1) .SingleSummary .SummaryHeading{
+    color: #fc002e;
+}
+.col:nth-child(2) .SingleSummary .SummaryHeading{
+    color: #08b9ff;
+}
+.col:nth-child(3) .SingleSummary .SummaryHeading{
+    color: #ffb820;
+}
+.col:nth-child(4) .SingleSummary .SummaryHeading{
+    color: #a2fa27;
+}
