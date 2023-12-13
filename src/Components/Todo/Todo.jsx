@@ -13,7 +13,7 @@ const Todo = () => {
     };
     return (
         <Fragment>
-            <div className='todoMain'>
+            <div className='todoMain myb-5 pyb-10'>
                 <h1>output is: {todo}</h1>
                 <br />
                 <textarea

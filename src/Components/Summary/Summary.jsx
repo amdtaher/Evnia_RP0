@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react'
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
-import { Container, Row, Col, Card, Button} from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 
 const Summary = () => {
   return (
     <Fragment>
-        <Container fluid={true} className='SummaryBanner p-0'>
+        <Container fluid={true} className='SummaryBanner p-0 myb-5' id='count'>
             <div className='SummaryBannerOverlay'>
-                <Container className='Summary'>
+                <Container className='Summary pyb-10'>
                     <Row>
                         <Col sm={12} md={6} lg={3} className='col'>
                             <div className='SingleSummary'>

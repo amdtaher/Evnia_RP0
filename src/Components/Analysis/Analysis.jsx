@@ -37,7 +37,7 @@ const data = [
 const Analysis = () => {
   return (
     <Fragment>
-      <Container fluid={true} className="FeaturesFixedBanner my-5 bg-black">
+      <Container fluid={true} className="FeaturesFixedBanner myb-5 pyb-10 bg-black">
         <div className="FeaturesBannerOverlay">
           <Container className="SummaryMain py-5">
             <Row className="align-items-center justify-content-center">
@@ -45,6 +45,7 @@ const Analysis = () => {
                 <h1 className="text-capitalize text-center pb-5 text-white">described bar chart</h1>
               </Col>
               <Col
+                className="barChart"
                 style={{ width: "60%", height: "550px" }}
                 sm={12}
                 md={6}

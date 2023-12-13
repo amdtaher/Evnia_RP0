@@ -11,6 +11,8 @@ import Popup from './Components/Popup/Popup'
 import Analysis from './Components/Analysis/Analysis'
 import Todo from './Components/todo/Todo'
 import Testimonial from './Components/Testimonial/Testimonial'
+import Reviews from './Components/Reviews/Reviews'
+import Star from './Components/Star/Star'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +28,8 @@ function App() {
       <Analysis/>
       <Todo/>
       <Testimonial/>
+      <Reviews/>
+      <Star/>
     </>
   )
 }

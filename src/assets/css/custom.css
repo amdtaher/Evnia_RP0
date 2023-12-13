@@ -3,6 +3,12 @@ img{
     max-width: 100%;
     vertical-align: middle;
 }
+.pyb-10{
+    padding-block: 10rem;
+}
+.myb-5{
+    margin-block: 5rem;
+}
 
 /* Top Navigation */
 .navBg{ 
@@ -94,9 +100,9 @@ img{
 }
 
 /* About */
-.About{
-    margin: 20rem 0 16rem;
-}
+/* .About{
+    margin: 5rem 0 12rem;
+} */
 .AboutTitle{
     color:red;
 }
@@ -119,9 +125,8 @@ img{
 .AboutSubHeading{
     font-size: 17px;
     font-weight: 400;
-    margin-right: 20px;
     color: #707070;
-    margin: 20px 0;
+    margin: 20px 20px 20px 0;
 }
 .AboutLinkOne{
     display: inline-block;
@@ -155,22 +160,22 @@ img{
 .AboutImages{
     position: relative;
 }
-.img1{
+.AboutImg{
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
 }
 .img2{
     position: absolute;
-    top: 160px;
-    left: 0;
+    top: 150px;
+    left: -30px;
 }
 .AboutImageLink{
     padding: 15px 35px;
     background-color: #ff2d55;
     color: #fff;
     position: absolute;
-    top: 460px;
+    top: 450px;
     right: 0;
     transition: .3s;
     box-shadow: 8px 10px 12px #ddd;
@@ -187,8 +192,8 @@ img{
     border: 20px solid #ff2d55;
     border-radius: 50%;
     position: absolute;
-    top: 70px;
-    left: 260px;
+    top: 80px;
+    left: 180px;
     animation: anime 4s linear infinite;
 }
 @keyframes anime{
@@ -205,9 +210,8 @@ img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 10rem;
 }
-.FeaturesBannerOverlay{
+.FeaturesBannerOverlay{   
     min-height: 500px;
     width:100%;
     background: rgba(0, 0, 0, 0.4);
@@ -254,17 +258,18 @@ img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 10rem;
 }
 .SummaryBannerOverlay{
     min-height: 400px;
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
 }
+.Summary{
+    position: relative;
+}
 .SingleSummary {
     color: #fff;
     text-align: center;
-    margin-top: 100px;
 }
 .SummaryHeading{
     font-size: 100px;
@@ -287,6 +292,14 @@ img{
     color: #a2fa27;
 }
 
+/* Analysis */
+/* Add this to your existing CSS or create a new stylesheet */
+@media only screen and (max-width: 990px) {
+    .barChart {
+        width: 100% !important;
+    }
+}
+
 /* TODO */
 .todoMain{
     background: #ddd;
@@ -305,9 +318,6 @@ img{
 }
 
 /* Testimonial */
-.testimonialMain{
-    margin: 60px 0 200px;
-}
 .section{
     text-transform: capitalize;
     margin: 60px 0;
@@ -370,4 +380,16 @@ img{
     width: 70px;
     height: 70px;
     border-radius: 50%;
+}
+
+/* Reviews */
+.reviewTitle{
+    color: #ff2d55 !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+}
+.ratings{
+    font-size: 25px;
+    cursor: pointer;
 }

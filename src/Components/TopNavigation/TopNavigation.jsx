@@ -45,9 +45,9 @@ useEffect(
           <Nav>
             <Nav.Link href="#home" className={scroll.navItem}>Home</Nav.Link>
             <Nav.Link href="#about" className={scroll.navItem}>About</Nav.Link>
-            <Nav.Link href="#gellery" className={scroll.navItem}>Gallery</Nav.Link>
-            <Nav.Link href="#blog" className={scroll.navItem}>Blog</Nav.Link>
-            <Nav.Link href="#contact" className={scroll.navItem}>Contact</Nav.Link>
+            <Nav.Link href="#features" className={scroll.navItem}>Features</Nav.Link>
+            <Nav.Link href="#count" className={scroll.navItem}>Count</Nav.Link>
+            <Nav.Link href="#testimonial" className={scroll.navItem}>Testimonial</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
