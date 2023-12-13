@@ -6,13 +6,6 @@ import TopFixedBannner from './Components/TopFixedBannner/TopFixedBannner'
 import About from './Components/About/About'
 import TopNavigation from './Components/TopNavigation/TopNavigation'
 import Features from './Components/Features/Features'
-import Summary from './Components/Summary/Summary'
-import Popup from './Components/Popup/Popup'
-import Analysis from './Components/Analysis/Analysis'
-import Todo from './Components/todo/Todo'
-import Testimonial from './Components/Testimonial/Testimonial'
-import Reviews from './Components/Reviews/Reviews'
-import Star from './Components/Star/Star'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,13 +16,6 @@ function App() {
       <TopFixedBannner/> 
       <About/>
       <Features/>
-      <Summary/>
-      <Popup/>
-      <Analysis/>
-      <Todo/>
-      <Testimonial/>
-      <Reviews/>
-      <Star/>
     </>
   )
 }
