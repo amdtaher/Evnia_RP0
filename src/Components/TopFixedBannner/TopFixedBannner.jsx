@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Container, Row, Col, Button} from 'react-bootstrap'
 
 const TopFixedBannner = () => {
   return (
-    <Fragment>
+    <>
         <Container fluid={true} className="TopFixedBanner p-0" id='home'>
           <div className="TopBannerOverlay" >
             <Container className="BannerContent text-center">
@@ -20,7 +20,7 @@ const TopFixedBannner = () => {
             </Container>
           </div>
         </Container>
-    </Fragment>
+    </>
   )
 }
 

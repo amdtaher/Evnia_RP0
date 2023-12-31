@@ -1,6 +1,6 @@
 import React from "react";
-import Slider from "react-slick";
 import { Container, Row, Col } from "react-bootstrap";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +8,7 @@ import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import profile1 from "../../assets/img/profile1.jpg";
 import profile2 from "../../assets/img/profile2.jpg";
 import profile3 from "../../assets/img/profile3.jpg";
+import { motion } from 'framer-motion';
 
 // Prev & Next Button
 function SampleNextArrow(props) {
@@ -37,12 +38,13 @@ function SampleNextArrow(props) {
 
 const Testimonial = () => {
     let settings = {
+        lazyLoad: true,
         dots: true,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 600,
+        speed: 500,
         cssEase: "linear",
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
@@ -73,15 +75,34 @@ const Testimonial = () => {
         ],
     };
 
+    const testimonial = {
+        default:{
+            opacity: 0,
+            },
+        fade:{
+            opacity: 1,
+            transition: {
+                delay: 13,
+                duration: 1.5,
+                ease: 'easeInOut', 
+                }
+        }
+    }
+
   return (
     <>
-        <Container className="testimonialMain text-center myb-5 pyb-10" id='testimonial'>
+        <motion.div
+        variants={testimonial}
+        initial='default'
+        animate='fade'
+        >
+            <Container className="testimonialMain text-center pyb-5" id='testimonial'>
             <Row>
             <Col sm={12}>
                 <div className="section" sm={12} md={12} lg={12}>
                 <h4 className="sectionTitle">what clients say</h4>
                 <p className="sectionSubTitle">list of feedbacks from clients</p>
-                <span className="sectionBorder"></span>
+                <span className="sectionBorder mt-5"></span>
                 </div>
             </Col>
             <Col sm={12}>
@@ -101,7 +122,7 @@ const Testimonial = () => {
                     />
                     </p>
                     <div className="profile mt-3">
-                    <img src={profile1} alt="" className="circle profileImg" />
+                    <img src={profile1} alt="" className="circle profileImg" loading="lazy" />
                     <a href="#" className="profileName">
                         thomas even
                         <span className="profileSubName">geologoy</span>
@@ -123,7 +144,7 @@ const Testimonial = () => {
                     />
                     </p>
                     <div className="profile mt-3">
-                    <img src={profile2} alt="" className="circle profileImg" />
+                    <img src={profile2} alt="" className="circle profileImg" loading="lazy" />
                     <a href="#" className="profileName">
                         thomas even
                         <span className="profileSubName">geologoy</span>
@@ -145,7 +166,7 @@ const Testimonial = () => {
                     />
                     </p>
                     <div className="profile mt-3">
-                    <img src={profile3} alt="" className="circle profileImg" />
+                    <img src={profile3} alt="" className="circle profileImg" loading="lazy" />
                     <a href="#" className="profileName">
                         thomas even
                         <span className="profileSubName">geologoy</span>
@@ -167,7 +188,7 @@ const Testimonial = () => {
                     />
                     </p>
                     <div className="profile mt-3">
-                    <img src={profile1} alt="" className="circle profileImg" />
+                    <img src={profile1} alt="" className="circle profileImg" loading="lazy" />
                     <a href="#" className="profileName">
                         thomas even
                         <span className="profileSubName">geologoy</span>
@@ -177,7 +198,8 @@ const Testimonial = () => {
                 </Slider>
             </Col>
             </Row>
-        </Container>
+            </Container>
+        </motion.div>
     </>
   );
 };

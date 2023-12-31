@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { FaFacebook, FaHome, FaInstagram, FaTwitch, FaYoutube } from "react-icons/fa";
+import { FaPhone, FaCalendar, FaLocationArrow, FaFacebook, FaInstagram, FaTwitch, FaYoutube } from "react-icons/fa";
 
 
 const Footer = () => {
@@ -13,9 +13,9 @@ const Footer = () => {
                         <div className='footerLeft'>
                         <h4 className='mb-3'>Vanue Location</h4>
                         <ul className='footerUl'>
-                            <li><a href="#"><FaHome className='me-2'/> 23-27 Jan, 2024</a></li>
-                            <li><a href="#"><FaHome className='me-2'/> yellow-green street, USA</a></li>
-                            <li><a href="#"><FaHome className='me-2'/> +880 123 4567 7890</a></li>
+                            <li><a href="#"><FaCalendar className='me-2'/> 23-27 Jan, 2024</a></li>
+                            <li><a href="#"><FaLocationArrow className='me-2'/> yellow-green street, USA</a></li>
+                            <li><a href="#"><FaPhone className='me-2'/> +880 123 4567 7890</a></li>
                         </ul>
                         </div>
                     </Col>

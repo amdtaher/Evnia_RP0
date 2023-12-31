@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 
 const Todo = () => {
     const [todo, setTodo] = useState('');
@@ -12,7 +12,7 @@ const Todo = () => {
         setWarning(upWarning);
     };
     return (
-        <Fragment>
+        <>
             <div className='todoMain myb-5 pyb-10'>
                 <h1>output is: {todo}</h1>
                 <br />
@@ -31,7 +31,7 @@ const Todo = () => {
                     Click
                 </button>
             </div>
-        </Fragment>
+        </>
     );
 };
 

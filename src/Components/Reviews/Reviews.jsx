@@ -1,9 +1,55 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Star from '../Star/Star';
-import Image from '../../assets/img/profile1.jpg';
+import { motion } from 'framer-motion';
+import image from '../../assets/img/profile1.jpg';
+import image2 from '../../assets/img/profile2.jpg';
+import image3 from '../../assets/img/profile3.jpg';
+import image4 from '../../assets/img/profile4.jpg';
+
+const imageArray = [
+    image,
+    image2,
+    image3,
+    image4,
+];
+
+const nameArray = [
+    'Samuel Jackson',
+    'Ed Sheran',
+    'Ema Watson',
+    'Jason Statham'
+]
 
 const Reviews = (myPlan) => {
+    const parentVariant = {
+        parentHidden: {
+            opacity: 0,
+        },
+        parentVisible: {
+            opacity: 1,
+            transition: {
+                delay: 15.8,
+                duration: 1.5,
+                ease: 'easeInOut', 
+                }
+        }
+    }
+    const childrenVariant = {
+        childrenHidden: {
+            x: "-100vw",
+            opacity: 0
+        },
+        childrenVisible: {
+            x: "0vw",
+            opacity: 1,
+            transition: {
+                delay: 16.3,
+                duration: 2,
+            }
+        }
+    }
+
     const [rating, setRating] = useState([Array(4).fill(0)]);
 
     const changeRating = (newRate, index) => {
@@ -12,9 +58,15 @@ const Reviews = (myPlan) => {
         setRating(newRatings);
         myPlan(newRatings);
     }
+
   return (
     <>
-        <Container className='text-center pyb-10'>
+        <motion.div
+        variants={parentVariant}
+        initial='parentHidden'
+        animate='parentVisible'
+        >
+            <Container className='text-center pyb-10'>
             <div className="section">
                 <h4 className='sectionTitle'>Reviews</h4>
             </div>
@@ -23,31 +75,38 @@ const Reviews = (myPlan) => {
                     {[0, 1, 2, 3].map(
                         (index) => (
                             <Col key={index} xs={12} sm={5} md={5} lg={3} className='m-auto'>
-                                <Card style={{ width: 'auto', marginBottom: '20px', marginInline: 'auto' }}>
-                                <Card.Img variant="top" src={Image} />
-                                <Card.Body>
-                                    <Card.Title className='reviewTitle'>Card Title</Card.Title>
-                                    <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                    </Card.Text>
-                                    <span className='ratings'>
-                                        {[1, 2, 3, 4, 5].map(
-                                            (value) => (
-                                                <Star
-                                                    key={value}
-                                                    filled={value <= rating[index]}
-                                                    onClick={() => changeRating(value, index)}
-                                                />
-                                            ))}
-                                    </span>
-                                </Card.Body>
-                                </Card>
+                                <motion.div
+                                variants={childrenVariant}
+                                initial='childrenHidden'
+                                animate='childrenVisible'
+                                >
+                                    <Card style={{ width: 'auto', marginBottom: '20px', marginInline: 'auto' }}>
+                                        <Card.Img variant="top" src={imageArray[index]} />
+                                        <Card.Body>
+                                            <Card.Title className='reviewTitle'>{nameArray[index]}</Card.Title>
+                                            <Card.Text>
+                                            Some quick example text to build on the card title and make up the
+                                            bulk of card's content. <b>{nameArray[index]}</b>
+                                            </Card.Text>
+                                            <span className='ratings'>
+                                                {[1, 2, 3, 4, 5].map(
+                                                    (value) => (
+                                                        <Star
+                                                            key={value}
+                                                            filled={value <= rating[index]}
+                                                            onClick={() => changeRating(value, index)}
+                                                        />
+                                                    ))}
+                                            </span>
+                                        </Card.Body>
+                                    </Card>
+                                </motion.div>
                             </Col>
                         ))}
                 </Row>
             </Container>
-        </Container>
+            </Container>
+        </motion.div>
     </>
   )
 }

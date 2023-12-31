@@ -15,21 +15,23 @@ import Testimonial from './Components/Testimonial/Testimonial'
 import Reviews from './Components/Reviews/Reviews'
 import Star from './Components/Star/Star'
 import Footer from './Components/Footer/Footer'
+import Another from './Components/Another/Another'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Hamburger/>
       {/* <TopNavigation/> */}
+      {/* <Another/> */}
+      {/* <Todo/> */}
+      <Hamburger/>
       <TopFixedBannner/> 
       <About/>
       <Features/>
-      <Summary/>
       <Popup/>
+      <Summary/>
       <Analysis/>
-      <Todo/>
       <Testimonial/>
       <Reviews/>
       <Star/>

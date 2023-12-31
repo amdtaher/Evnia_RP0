@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { Container, Row, Col} from 'react-bootstrap';
 
 const Summary = () => {
   return (
-    <Fragment>
+    <>
         <Container fluid={true} className='SummaryBanner p-0 myb-5' id='count'>
             <div className='SummaryBannerOverlay'>
                 <Container className='Summary pyb-10'>
@@ -70,7 +70,7 @@ const Summary = () => {
                 </Container>
             </div>
         </Container>
-    </Fragment>
+    </>
   )
 }
 

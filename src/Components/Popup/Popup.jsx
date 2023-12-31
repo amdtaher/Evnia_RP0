@@ -1,9 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Player, BigPlayButton, ControlBar } from 'video-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faAnchor } from '@fortawesome/free-solid-svg-icons';
+import { faMagic } from '@fortawesome/free-solid-svg-icons';
 import image from '../../assets/img/featureBanner.jpg';
 import ReactPlayer from 'react-player';
 
@@ -13,18 +13,11 @@ const Popup = () => {
     const handleShow = () => setShow(true);
 
     return (
-        <Fragment>
-            <div className="myb-5 pyb-10">
-                <div className="text-center py-5">
-                <FontAwesomeIcon className="Coffee" onClick={handleShow} icon={faCoffee} size="2xl" />
-                <FontAwesomeIcon className="Coffee" onClick={handleShow} icon={faAnchor} size="2xl" />
-                <FontAwesomeIcon className="Coffee" onClick={handleShow} icon={faCoffee} size="2xl" />
-                <FontAwesomeIcon className="Coffee" onClick={handleShow} icon={faAnchor} size="2xl" />
-                </div>
-
+        <>
+            <div className="pyb-5">
                 <div className="text-center">
                 <Button variant="primary" onClick={handleShow} className="p-5">
-                    Launch demo modal
+                    Launch demo modal <FontAwesomeIcon className="Coffee" onClick={handleShow} icon={faMagic} size="2xl" />
                 </Button>
                 </div>
                 <Modal show={show} onHide={handleClose} size="xl" aria-labelledby="contained-modal-title-vcenter" centered>
@@ -42,7 +35,7 @@ const Popup = () => {
                     </Modal.Footer>
                 </Modal>
             </div>
-        </Fragment>
+        </>
     )
 }
 
