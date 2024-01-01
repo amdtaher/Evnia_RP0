@@ -11,7 +11,6 @@ const Features = () => {
     parentVisible: {
         opacity: 1,
         transition: {
-            delay: 4.5,
             duration: 1.6,
             mass: 1,
             damping: .1,
@@ -29,8 +28,8 @@ const Features = () => {
           opacity: 1,
           y: '0vh',
           transition: {
-              delay: 5,
-              duration: 1.5,
+              delay: .5,
+              duration: 1,
               ease: 'easeInOut', 
               }
       }
@@ -40,16 +39,19 @@ const Features = () => {
     <>
       <motion.div
       variants={parentVariant}
+      viewport={false}
       initial="parentHidden"
-      animate="parentVisible"
+      whileInView="parentVisible"
+      className="pyb-5"
       >
         <Container fluid={true} className="FeaturesBanner p-0" id='features'>
           <div className="FeaturesBannerOverlay py-10">
             <Container className="FeaturesContent text-center">
               <motion.div
               variants={childVariant}
+              viewport={false}
               initial='childrenHidden'
-              animate='childrenVisible'
+              whileInView='childrenVisible'
               >
                 <Row>
                   <Col>

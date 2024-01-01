@@ -2,21 +2,21 @@ import React from 'react'
 import { Container,Row,Col} from 'react-bootstrap'
 import About1 from "../../assets/img/about2.jpg"
 import About2 from "../../assets/img/about1.jpg"
+import cv from '../../assets/img/Taher_Ahmed.pdf'
 import { motion } from 'framer-motion';
 
 
 const About = () => {
     const parentVariant = {
         parentHidden: {
-            x: "-100vw",
+            x: -500,
             opacity: 0
         },
         parentVisible: {
-            x: "00vw",
+            x: 0,
             opacity: 1,
             transition: {
-                delay: 0.5,
-                duration: 1.6,
+                duration: 1.2,
                 mass: 1,
                 damping: .1,
                 staggerChildren: 1,
@@ -24,15 +24,15 @@ const About = () => {
             }
         },
         parentHiddenReverse: {
-            x: "100vw",
+            x: 500,
             opacity: 0
         },
         parentVisibleReverse: {
-            x: "00vw",
+            x: 0,
             opacity: 1,
             transition: {
                 delay: 0.5,
-                duration: 3,
+                duration: 2,
                 mass: 1,
                 damping: .1,
                 staggerChildren: 1,
@@ -47,7 +47,7 @@ const About = () => {
         childrenVisible: {
             opacity: 1,
             transition: {
-                delay: 2.2,
+                delay: .5,
                 duration: 1.5,
                 ease: 'easeInOut', 
                 }
@@ -55,8 +55,8 @@ const About = () => {
         childrenVisible2nd: {
             opacity: 1,
             transition: {
-                delay: 3,
-                duration: 1.5,
+                delay: .5,
+                duration: 1,
                 ease: 'easeInOut', 
                 }
         }
@@ -64,28 +64,23 @@ const About = () => {
 
   return (
     <>
-        <motion.div
-        variants={parentVariant}
-        initial="parentHidden"
-        animate="parentVisible"
-        >
-            <Container className="About pyb-10 myb-5" id='about'>
-                <motion.div
+        <Container className="About pyb-10" id='about'>
+            <motion.div
                 variants={parentVariant}
                 initial="parentHidden"
-                animate="parentVisible"
+                whileInView="parentVisible"
                 >
                     <Row>
                         <Col sm={12} md={6} lg={6} >
                             <motion.div
                             variants={parentVariant}
                             initial="parentHiddenReverse"
-                            animate="parentVisibleReverse"
+                            whileInView="parentVisibleReverse"
                             >
                                 <motion.div
                                 variants={childVariant}
                                 initial='childrenHidden'
-                                animate='childrenVisible'
+                                whileInView='childrenVisible'
                                 className="aboutContent">
                                     <h6 className="AboutTitle">JOIN THE EVENT</h6>
                                     <h1 className='AboutHeading'>We Create and <span>Turn</span> Into Reality</h1>
@@ -93,7 +88,10 @@ const About = () => {
                                     <p className='AboutSubHeading'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                                     <div className="AboutButtons mt-3">
                                     <a href=""  className="AboutLinkOne">Read More</a>
-                                    <a href="" className="AboutLinkTwo">Buy Ticket</a>
+                                    <a href={cv} 
+                                    download='Taher_Ahmed (CV)' 
+                                    target='_blank' 
+                                    className="AboutLinkTwo">Download CV</a>
                                     </div>
                                 </motion.div>
                             </motion.div>
@@ -103,23 +101,20 @@ const About = () => {
                                     <div className='aboutImg'>
                                         <img className='img1'  src={About1} alt="About1"/>
                                         <img className='img2' src={About2} alt="About2"/>
-                                        <motion.a
+                                        <motion.div
                                         variants={childVariant}
                                         initial='childrenHidden'
-                                        animate='childrenVisible2nd'
-                                        href="" className='AboutImageLink'>Explore More About</motion.a>
-                                        <motion.span
-                                        variants={childVariant}
-                                        initial='childrenHidden'
-                                        animate='childrenVisible2nd'
-                                        ></motion.span>
+                                        whileInView='childrenVisible2nd'
+                                        >
+                                        <a href="" className='AboutImageLink'>Explore More About</a>
+                                        <span></span>
+                                        </motion.div>
                                     </div>
                                 </div>
                         </Col>
                     </Row>
-                </motion.div>
-            </Container>
-        </motion.div>
+            </motion.div>
+        </Container>
     </>
   )
 }

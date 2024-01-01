@@ -24,17 +24,16 @@ function SampleNextArrow(props) {
         </div>
     );
 }
-    
-    function SamplePrevArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "black", color: "black",borderRadius: '50%'}}
-            onClick={onClick}
-        />
-        );
-    }
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+    <div
+        className={className}
+        style={{ ...style, display: "block", background: "black", color: "black",borderRadius: '50%'}}
+        onClick={onClick}
+    />
+    );
+}
 
 const Testimonial = () => {
     let settings = {
@@ -82,7 +81,6 @@ const Testimonial = () => {
         fade:{
             opacity: 1,
             transition: {
-                delay: 13,
                 duration: 1.5,
                 ease: 'easeInOut', 
                 }
@@ -94,109 +92,109 @@ const Testimonial = () => {
         <motion.div
         variants={testimonial}
         initial='default'
-        animate='fade'
+        whileInView='fade'
         >
             <Container className="testimonialMain text-center pyb-5" id='testimonial'>
             <Row>
-            <Col sm={12}>
-                <div className="section" sm={12} md={12} lg={12}>
-                <h4 className="sectionTitle">what clients say</h4>
-                <p className="sectionSubTitle">list of feedbacks from clients</p>
-                <span className="sectionBorder mt-5"></span>
-                </div>
-            </Col>
-            <Col sm={12}>
-                <Slider {...settings}>
-                <div className="singleTestimonial my-3">
-                    <p className="feedback px-3">
-                    <FontAwesomeIcon
-                        className="fontAwesomeIcon px-2"
-                        icon={faQuoteLeft}
-                    />{" "}
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Reiciendis, alias minus. Aperiam sed, assumenda nihil
-                    accusantium quaerat acomplice clise eclipse gutss greddy.{" "}
-                    <FontAwesomeIcon
-                        className="fontAwesomeIcon px-2"
-                        icon={faQuoteRight}
-                    />
-                    </p>
-                    <div className="profile mt-3">
-                    <img src={profile1} alt="" className="circle profileImg" loading="lazy" />
-                    <a href="#" className="profileName">
-                        thomas even
-                        <span className="profileSubName">geologoy</span>
-                    </a>
+                <Col sm={12}>
+                    <div className="section" sm={12} md={12} lg={12}>
+                        <h4 className="sectionTitle">what clients say</h4>
+                        <p className="sectionSubTitle">list of feedbacks from clients</p>
+                        <span className="sectionBorder mt-5"></span>
                     </div>
-                </div>
-                <div className="singleTestimonial my-3">
-                    <p className="feedback px-3">
-                    <FontAwesomeIcon
-                        className="fontAwesomeIcon px-2"
-                        icon={faQuoteLeft}
-                    />{" "}
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Reiciendis, alias minus. Aperiam sed, assumenda nihil
-                    accusantium quaerat acomplice clise eclipse gutss greddy.{" "}
-                    <FontAwesomeIcon
-                        className="fontAwesomeIcon px-2"
-                        icon={faQuoteRight}
-                    />
-                    </p>
-                    <div className="profile mt-3">
-                    <img src={profile2} alt="" className="circle profileImg" loading="lazy" />
-                    <a href="#" className="profileName">
-                        thomas even
-                        <span className="profileSubName">geologoy</span>
-                    </a>
-                    </div>
-                </div>
-                <div className="singleTestimonial my-3">
-                    <p className="feedback px-3">
-                    <FontAwesomeIcon
-                        className="fontAwesomeIcon px-2"
-                        icon={faQuoteLeft}
-                    />{" "}
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Reiciendis, alias minus. Aperiam sed, assumenda nihil
-                    accusantium quaerat acomplice clise eclipse gutss greddy.{" "}
-                    <FontAwesomeIcon
-                        className="fontAwesomeIcon px-2"
-                        icon={faQuoteRight}
-                    />
-                    </p>
-                    <div className="profile mt-3">
-                    <img src={profile3} alt="" className="circle profileImg" loading="lazy" />
-                    <a href="#" className="profileName">
-                        thomas even
-                        <span className="profileSubName">geologoy</span>
-                    </a>
-                    </div>
-                </div>
-                <div className="singleTestimonial my-3">
-                    <p className="feedback px-3">
-                    <FontAwesomeIcon
-                        className="fontAwesomeIcon px-2"
-                        icon={faQuoteLeft}
-                    />{" "}
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Reiciendis, alias minus. Aperiam sed, assumenda nihil
-                    accusantium quaerat acomplice clise eclipse gutss greddy.{" "}
-                    <FontAwesomeIcon
-                        className="fontAwesomeIcon px-2"
-                        icon={faQuoteRight}
-                    />
-                    </p>
-                    <div className="profile mt-3">
-                    <img src={profile1} alt="" className="circle profileImg" loading="lazy" />
-                    <a href="#" className="profileName">
-                        thomas even
-                        <span className="profileSubName">geologoy</span>
-                    </a>
-                    </div>
-                </div>
-                </Slider>
-            </Col>
+                </Col>
+                <Col sm={12}>
+                    <Slider {...settings}>
+                        <div className="singleTestimonial my-3">
+                            <p className="feedback px-3">
+                            <FontAwesomeIcon
+                                className="fontAwesomeIcon px-2"
+                                icon={faQuoteLeft}
+                            />{" "}
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Reiciendis, alias minus. Aperiam sed, assumenda nihil
+                            accusantium quaerat acomplice clise eclipse gutss greddy.{" "}
+                            <FontAwesomeIcon
+                                className="fontAwesomeIcon px-2"
+                                icon={faQuoteRight}
+                            />
+                            </p>
+                            <div className="profile mt-3">
+                            <img src={profile1} alt="" className="circle profileImg" loading="lazy" />
+                            <a href="#" className="profileName">
+                                thomas even
+                                <span className="profileSubName">geologoy</span>
+                            </a>
+                            </div>
+                        </div>
+                        <div className="singleTestimonial my-3">
+                            <p className="feedback px-3">
+                            <FontAwesomeIcon
+                                className="fontAwesomeIcon px-2"
+                                icon={faQuoteLeft}
+                            />{" "}
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Reiciendis, alias minus. Aperiam sed, assumenda nihil
+                            accusantium quaerat acomplice clise eclipse gutss greddy.{" "}
+                            <FontAwesomeIcon
+                                className="fontAwesomeIcon px-2"
+                                icon={faQuoteRight}
+                            />
+                            </p>
+                            <div className="profile mt-3">
+                            <img src={profile2} alt="" className="circle profileImg" loading="lazy" />
+                            <a href="#" className="profileName">
+                                thomas even
+                                <span className="profileSubName">geologoy</span>
+                            </a>
+                            </div>
+                        </div>
+                        <div className="singleTestimonial my-3">
+                            <p className="feedback px-3">
+                            <FontAwesomeIcon
+                                className="fontAwesomeIcon px-2"
+                                icon={faQuoteLeft}
+                            />{" "}
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Reiciendis, alias minus. Aperiam sed, assumenda nihil
+                            accusantium quaerat acomplice clise eclipse gutss greddy.{" "}
+                            <FontAwesomeIcon
+                                className="fontAwesomeIcon px-2"
+                                icon={faQuoteRight}
+                            />
+                            </p>
+                            <div className="profile mt-3">
+                            <img src={profile3} alt="" className="circle profileImg" loading="lazy" />
+                            <a href="#" className="profileName">
+                                thomas even
+                                <span className="profileSubName">geologoy</span>
+                            </a>
+                            </div>
+                        </div>
+                        <div className="singleTestimonial my-3">
+                            <p className="feedback px-3">
+                            <FontAwesomeIcon
+                                className="fontAwesomeIcon px-2"
+                                icon={faQuoteLeft}
+                            />{" "}
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Reiciendis, alias minus. Aperiam sed, assumenda nihil
+                            accusantium quaerat acomplice clise eclipse gutss greddy.{" "}
+                            <FontAwesomeIcon
+                                className="fontAwesomeIcon px-2"
+                                icon={faQuoteRight}
+                            />
+                            </p>
+                            <div className="profile mt-3">
+                            <img src={profile1} alt="" className="circle profileImg" loading="lazy" />
+                            <a href="#" className="profileName">
+                                thomas even
+                                <span className="profileSubName">geologoy</span>
+                            </a>
+                            </div>
+                        </div>
+                    </Slider>
+                </Col>
             </Row>
             </Container>
         </motion.div>

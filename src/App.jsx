@@ -16,6 +16,7 @@ import Reviews from './Components/Reviews/Reviews'
 import Star from './Components/Star/Star'
 import Footer from './Components/Footer/Footer'
 import Another from './Components/Another/Another'
+import SwipperjsTry from './Components/swipperjsTry/SwipperjsTry'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
       {/* <TopNavigation/> */}
       {/* <Another/> */}
       {/* <Todo/> */}
+      {/* <SwipperjsTry/> */}
       <Hamburger/>
       <TopFixedBannner/> 
       <About/>

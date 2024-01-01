@@ -29,22 +29,21 @@ const Reviews = (myPlan) => {
         parentVisible: {
             opacity: 1,
             transition: {
-                delay: 15.8,
                 duration: 1.5,
-                ease: 'easeInOut', 
+                ease: 'easeInOut',
                 }
         }
     }
     const childrenVariant = {
         childrenHidden: {
-            x: "-100vw",
-            opacity: 0
+            x: -500,
+            opacity: 0,
         },
         childrenVisible: {
-            x: "0vw",
             opacity: 1,
+            x: 0,
             transition: {
-                delay: 16.3,
+                delay: .5,
                 duration: 2,
             }
         }
@@ -63,8 +62,9 @@ const Reviews = (myPlan) => {
     <>
         <motion.div
         variants={parentVariant}
+        viewport={false}
         initial='parentHidden'
-        animate='parentVisible'
+        whileInView='parentVisible'
         >
             <Container className='text-center pyb-10'>
             <div className="section">
@@ -77,8 +77,10 @@ const Reviews = (myPlan) => {
                             <Col key={index} xs={12} sm={5} md={5} lg={3} className='m-auto'>
                                 <motion.div
                                 variants={childrenVariant}
+                                viewport={false}
                                 initial='childrenHidden'
-                                animate='childrenVisible'
+                                // animate='childrenVisible'
+                                whileInView='childrenVisible'
                                 >
                                     <Card style={{ width: 'auto', marginBottom: '20px', marginInline: 'auto' }}>
                                         <Card.Img variant="top" src={imageArray[index]} />

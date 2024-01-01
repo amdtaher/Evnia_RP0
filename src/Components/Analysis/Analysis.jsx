@@ -25,8 +25,7 @@ const Analysis = () => {
       width: 480,
       opacity: 1,
       transition: {
-        delay: 9,
-        duration: 2,
+        duration: 1.5,
         ease: 'easeInOut', 
       }
     }
@@ -44,7 +43,7 @@ const Analysis = () => {
                   <motion.span
                   variants={analysis}
                   initial="default"
-                  animate="stretch"
+                  whileInView="stretch"
                   className="analysisSectionBorder"></motion.span>
                   </div>
               </Col>
