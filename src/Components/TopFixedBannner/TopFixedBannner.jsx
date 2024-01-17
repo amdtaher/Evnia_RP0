@@ -14,11 +14,7 @@ const Banner = () => {
   const [hours, setHours] = useState('');
   const [minutes, setMinutes] = useState('');
   const [seconds, setSeconds] = useState('');
-
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+  
   useEffect(()=>{
     const timer = ()=>{
       const d = new Date();
@@ -52,7 +48,7 @@ const Banner = () => {
                 </h2>
                 <ul className='placeNdate'>
                   <li><FaCompass className='me-2 primaryColor'/> yellow street, united state</li>
-                  <li><FaCalendar className='me-2 primaryColor'/> 25-30 Dec, 2024</li>
+                  <li><FaCalendar className='me-2 primaryColor'/> 25-30 jan, 2024</li>
                 </ul>
                 <ul className='bannerButtons'>
                   <li><a href="#">buy tickets now!</a></li>
@@ -73,7 +69,7 @@ const Banner = () => {
                     </Modal.Footer>
                 </Modal>
                 <ul className='countDown'>
-                  <li><span id='day'>{day}</span> dec</li>
+                  <li><span id='day'>{day}</span> jan</li>
                   <li><span id='hour'>{hours}</span> hours</li>
                   <li><span id='minute'>{minutes}</span> minutes</li>
                   <li><span id='second'>{seconds}</span> seconds</li>
