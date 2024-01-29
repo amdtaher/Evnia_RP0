@@ -1,10 +1,10 @@
 import React from 'react';
-import { ColorRing, ThreeDots } from 'react-loader-spinner';
+import { ThreeDots } from 'react-loader-spinner';
 
 const Loader = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: '#fff' }}>
-      <ColorRing
+      <ThreeDots
         visible={true}
         height="100"
         width="100"

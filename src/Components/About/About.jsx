@@ -4,6 +4,7 @@ import About1 from "../../assets/img/about2.jpg"
 import About2 from "../../assets/img/about1.jpg"
 import cv from '../../assets/img/Taher_Ahmed.pdf'
 import { motion } from 'framer-motion';
+import image from '../../assets/img/signature.png'
 
 
 const About = () => {
@@ -86,6 +87,7 @@ const About = () => {
                                     <h1 className='AboutHeading'>We Create and <span>Turn</span> Into Reality</h1>
                                     <p className='AboutSubHeading'>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                                     <p className='AboutSubHeading'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <img src={image} alt="" />
                                     <div className="AboutButtons mt-3">
                                     <a href=""  className="AboutLinkOne">Read More</a>
                                     <a href={cv} 

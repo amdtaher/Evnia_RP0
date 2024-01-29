@@ -1,19 +1,93 @@
-/* Globar Styles */
+/* 
+Project Name: Envie
+Author: Tanveer
+Made with: React
+
+Table of Sections:-
+    .00 Universal Styles
+    .00.5 Common Styles
+    .01 Navigation Bar
+    .02 Banner
+    .03 About
+    .04 Services
+    .05 Speakers
+    .06 Schedules
+    .07 Plans
+    08 Pricings
+    .09 Sponsors
+    .10 Blogs
+    .11 Footer
+    .12 @Media Queries
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+:root{
+    --primary-color:#FF2D55;
+    --secondary-color:#0d1028;
+    --skyBlue: #00ACEE;
+    --lightYellow: #ffae00;
+    --white:#fff;
+    --grey:#ddd;
+    --primary-hover:#b21a36;
+}
+
+/* .00 Universal Styles */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+a{
+    display: inline-block;
+    font-weight: 500;
+    color: var(--white);
+    transition: .3s;
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
 img{
     max-width: 100%;
     vertical-align: middle;
 }
-.pyb-10{
-    padding-block: 10rem;
+
+/* .00.5 Common Styles */
+.bg{
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: repeat-x;
+    padding: 0;
+}
+.banner{
+    text-transform: capitalize;
+}
+.primaryColor{
+    color: var(--primary-color);
 }
 .pyb-5{
     padding-block: 5rem;
 }
+.pyb-10{
+    padding-block: 10rem;
+}
 .myb-5{
     margin-block: 5rem;
 }
+.myb-10{
+    margin-block: 10rem;
+}
+.active{
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+}
 
-/* Hamburger */
+/* 0.01 Hamburger */
 
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -25,7 +99,7 @@ img{
 }
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-    background: tomato;
+    background: var(--primary-color);
 }
 .bm-burger-bars-scroll {
     background: black;
@@ -41,7 +115,7 @@ img{
 }
 /* Color/shape of close button cross */
 .bm-cross {
-    background: tomato;
+    background: var(--primary-color);
 }
 /*
 Sidebar wrapper styles
@@ -83,7 +157,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     background: rgba(0, 0, 0, 0.3);
 }
 
-/* Top Navigation */
+/* .01 Navigation Bar */
 .navBg{ 
     -webkit-transition:background-color 400ms linear ;
     -moz-transition:background-color 400ms linear ;
@@ -127,96 +201,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     color: tomato !important;
     transition: .3s;
 }
-
-/* 
-Project Name: Envie
-Author: Tanveer
-Made with: React
-
-Table of Sections:-
-    .00 Universal Styles
-    .00.5 Common Styles
-    .01 Navigation Bar
-    .02 Banner
-    .03 About
-    .04 Services
-    .05 Speakers
-    .06 Schedules
-    .07 Plans
-    08 Pricings
-    .09 Sponsors
-    .10 Blogs
-    .11 Footer
-    .12 @Media Queries
-*/
-
-
-:root{
-    --primary-color:#FF2D55;
-    --secondary-color: #00ACEE;
-    --third-color: #EFA506;
-    --black:#0d1028;
-    --white:#fff;
-    --grey:#ddd;
-    --primary-hover:#b21a36;
-    }
-
-
-/* .00 Universal Styles */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body{
-    font-family: 'Poppins', sans-serif;
-}
-a {
-    display: inline-block;
-    font-weight: 500;
-    color: var(--primary-color);
-    text-decoration: inherit;
-    transition: .3s;
-    cursor: pointer;
-}
-ul{
-    list-style-type: none;
-    padding: 0;
-}
-img{
-    max-width: 100%;
-    vertical-align: middle;
-}
-
-
-/* .00.5 Common Styles */
-.bg{
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: repeat-x;
-    padding: 0;
-}
-.banner{
-    text-transform: capitalize;
-}
-.primaryColor{
-    color: var(--primary-color);
-}
-.pyb-5{
-    padding-block: 5rem;
-}
-.pyb-10{
-    padding-block: 10rem;
-}
-.myb-5{
-    margin-block: 5rem;
-}
-.myb-10{
-    margin-block: 10rem;
-}
-
-/* .01 Navigation Bar */
-
+/* Navigation Bar Styles Ends */
 
 /* .02 Banner */
 .bannerMain{
@@ -250,10 +235,10 @@ img{
     font-size: 22px;
     font-weight: 400;
     line-height: 42px;
-    color: var(--third-color);
+    color: var(--lightYellow);
 }
 .bannerSubHeading span{
-    color: var(--secondary-color);
+    color: var(--skyBlue);
 }
 .bannerHeading{
     font-size: 65px;
@@ -282,7 +267,7 @@ img{
     display: inline-block;
 }
 .bannerHeading ul li:nth-child(1){
-    color: var(--third-color);
+    color: var(--lightYellow);
 }
 .bannerHeading ul li:nth-child(2){
     color: var(--primary-color);
@@ -291,7 +276,7 @@ img{
     color: var(--white);
 }
 .bannerHeading ul li:nth-child(4){
-    color: var(--secondary-color);
+    color: var(--skyBlue);
 }
 
 .placeNdate{
@@ -322,30 +307,29 @@ img{
     position: relative;
     z-index: 1;
 }
-.bannerButtons li:last-child::before{
-    content: '';
+.videoButton{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: var(--secondary-color);
-    position: absolute;
-    top: -10px;
-    left: -20px;
-    z-index: -1;
+    background: var(--skyBlue);
+    color: var(--white);
+    border: none;
 }
 
 .countDown{
     color: var(--white);
     display: flex;
-    gap: 30px;
+    gap: 100px;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     margin-top: 130px;
 }
 .countDown li{
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 500;
+    display: flex;
+    position: relative;
 }
 .countDown li span{
     font-size: 60px;
@@ -355,14 +339,31 @@ img{
     color: var(--primary-color);
 }
 .countDown li:nth-child(2) span{
-    color: var(--secondary-color);
-}
-.countDown li:nth-child(3) span{
     color: var(--white);
 }
-.countDown li:nth-child(4) span{
-    color: var(--third-color);
+.countDown li:nth-child(3) span{
+    color: var(--skyBlue);
 }
+.countDown li:nth-child(4) span{
+    color: var(--lightYellow);
+}
+.countName{
+    display: block;
+    /* color: #fff; */
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    right: -55px;
+    top: 50%;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    margin-top: -10px;
+    letter-spacing: 2px;
+}
+.day .countName{
+    right: -36px;
+}
+
 
 /* About */
 /* .About{
@@ -659,7 +660,7 @@ img{
 
 /* Reviews */
 .reviewTitle{
-    color: #ff2d55 !important;
+    color: var(--primary-color) !important;
     font-size: 30px !important;
     font-weight: 700 !important;
     margin-bottom: 10px !important;
